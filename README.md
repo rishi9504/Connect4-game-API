@@ -9,7 +9,7 @@
 
 
 
-
+# Start the game
 	To start the game:
 		-- call the api -- "http://127.0.0.1:<port-number>/game/4connect/start"
 		--normally the port is 5000 so the link will be like --"http://127.0.0.1:5000/game/4connect/start"
