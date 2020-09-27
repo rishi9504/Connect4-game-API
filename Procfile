@@ -1,1 +1,1 @@
-web: python connect_4_api.py
+web: gunicorn src python connect_4_api.py
