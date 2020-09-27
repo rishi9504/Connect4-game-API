@@ -1,4 +1,4 @@
-# How to use:
+# How to use locally:
 	-- run the python script connect_4_api.py
 
 # Dependencies:
@@ -30,3 +30,19 @@
 			(2) when the column number is invalid or the board is completely filled and no further move is possible, the response is -- [ "INVALID" ]
 
 			(3) For each valid move, the response is [ "VALID" ]
+
+# How to use on the hosted link
+
+You can go to this link for checking if the app is working or not.
+
+
+
+The following link will reset the board to play
+
+https://connect4game-api.herokuapp.com/start
+
+The following link can be used to move the pieces on the board
+
+https://connect4game-api.herokuapp.com/move/<player number>/<tile number>
+
+e.g : https://connect4game-api.herokuapp.com/move/2/1
