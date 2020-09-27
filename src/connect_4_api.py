@@ -11,13 +11,13 @@ Board = create_board()
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-@app.route('/game/4connect/start', methods=['GET'])
+@app.route('/start', methods=['GET'])
 def api_start():
 	reset_board(Board)
 	return jsonify("READY")
 
 
-@app.route('/game/4connect/move/1/<col>', methods=['GET', 'POST'])
+@app.route('/move/1/<col>', methods=['GET', 'POST'])
 def api_player1_move(col):
 	col = int(col)
 	if(col < 0 or col > COLUMNS):
@@ -37,7 +37,7 @@ def api_player1_move(col):
 	
 	
 
-@app.route('/game/4connect/move/2/<col>', methods=['GET'])
+@app.route('/move/2/<col>', methods=['GET'])
 def api_player2_move(col):
 	col = int(col)
 	if(col < 0 or col > COLUMNS):
