@@ -10,7 +10,7 @@ https://connect4game-api.herokuapp.com/start
 
 The following link can be used to move the pieces on the board
 
-https://connect4game-api.herokuapp.com/move/<player number>/<tile number>
+https://connect4game-api.herokuapp.com/move/<player_number>/<tile_number>
 
 e.g : https://connect4game-api.herokuapp.com/move/2/1
 
