@@ -11,12 +11,15 @@ Board = create_board()
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
+#route to reset the board and start a new game
 @app.route('/start', methods=['GET'])
 def api_start():
 	reset_board(Board)
 	return jsonify("READY")
 
-
+#route to move the piece for the player one to the desired column number,
+#if the column is invalid return invalid else the move is valid,
+#if there are four connecting pieces return Winner
 @app.route('/move/1/<col>', methods=['GET', 'POST'])
 def api_player1_move(col):
 	col = int(col)
@@ -35,7 +38,9 @@ def api_player1_move(col):
 			print_board(Board)
 			return jsonify("VALID") #jsonify(Board)
 	
-	
+#route to move the piece for the player two to the desired column number,
+#if the column is invalid return invalid else the move is valid,
+#if there are four connecting pieces return Winner	
 
 @app.route('/move/2/<col>', methods=['GET'])
 def api_player2_move(col):
@@ -57,10 +62,7 @@ def api_player2_move(col):
 			return jsonify("VALID")#jsonify(Board)
 
 def main():
-	"""
-		Use localhost:5000/game/start/ to create new game
-		Use localhost:5000/game/move/<player-no>/<column> to play the move of the player-no on the specifed column number.  
-	"""
+	
 	app.run()
 
 
