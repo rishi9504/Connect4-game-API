@@ -1,5 +1,4 @@
-# How to use on the hosted link
-
+# HostedLink
 You can go to this link for checking if the app is working or not.
 
 
@@ -10,7 +9,7 @@ https://connect4game-api.herokuapp.com/start
 
 The following link can be used to move the pieces on the board
 
-https://connect4game-api.herokuapp.com/move/<player_number>/<tile_number>
+https://connect4game-api.herokuapp.com/move/<player number>/<tile number>
 
 e.g : https://connect4game-api.herokuapp.com/move/2/1
 
@@ -49,4 +48,5 @@ e.g : https://connect4game-api.herokuapp.com/move/2/1
 			(2) when the column number is invalid or the board is completely filled and no further move is possible, the response is -- [ "INVALID" ]
 
 			(3) For each valid move, the response is [ "VALID" ]
+
 
